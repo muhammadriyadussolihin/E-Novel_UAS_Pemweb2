@@ -12,7 +12,9 @@
 | 1   | Introduction                | [Click Here](#introduction)                                                                                      |
 | 2   | Video Presentasi (Link Youtube)                | [Click Here](https://youtu.be/-xlVoctLRdc)                                                                                     |
 | 3   | Demo Program (Link Youtube) | [Click Here](https://youtu.be/rVOU5vNex6o)                                                   |
-| 4   | Laporan Project             | [Click Here](https://github.com/AnggitaRisqiNC/E-Novel/files/15246002/Laporan.Project.UTS.Pemrograman.Web.2.pdf) |
+| 4   | Poster | [Click Here](https://drive.google.com/file/d/1S2rgFtzs_PZR47CHzRU8oRyaD7U_9PDx/view?usp=sharing)                                                   |
+| 5   | Laporan Project             | [Click Here](https://drive.google.com/file/d/1cKgTaID7smj9ZwpP69PTcDlY2jXrGOEj/view?usp=sharing) |
+
 
 ## Introduction
 
