@@ -1,0 +1,245 @@
+ERROR - 2025-07-07 10:26:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#10 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#7 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-07-07 10:26:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_users`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\E-Novel-main\\public\\index.php')
+ERROR - 2025-07-07 10:26:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin123')
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#10 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin123')
+#7 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-07-07 10:26:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_users`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin123')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\E-Novel-main\\public\\index.php')
+ERROR - 2025-07-07 10:26:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#10 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#7 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-07-07 10:26:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_users`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\E-Novel-main\\public\\index.php')
+ERROR - 2025-07-07 10:26:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#10 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#7 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-07-07 10:26:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_users`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\E-Novel-main\\public\\index.php')
+ERROR - 2025-07-07 10:31:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#10 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\E-Novel-main\app\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\E-Novel-main\app\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+#7 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+#8 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+#9 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Novel-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Novel-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-07-07 10:31:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_users`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsersModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ValidationController.php(44): App\Models\UsersModel->getUserByLogin('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ValidationController->proses_login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\E-Novel-main\\public\\index.php')
